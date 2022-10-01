@@ -25,7 +25,7 @@ type Server struct {
 	ComputeSycnerTargetName string `envconfig:"SERVER_COMPUTE_SYNCER_TARGET_NAME" yaml:"computeSyncerTargetName,omitempty" default:""`
 	ComputeSyncerIDPPrefix  string `envconfig:"SERVER_COMPUTE_SYNCER_IDP_PREFIX" yaml:"computeSyncerIDPPrefix,omitempty" default:"kcp-syncer-"`
 
-	ComputeSyncerResourcesToSync []string `envconfig:"SERVER_COMPUTE_SYNCER_RESOURCES_TO_SYNC" yaml:"computeSyncerResourcesToSync,omitempty" default:"services,ingresses.networking.k8s.io"`
+	ComputeSyncerResourcesToSync []string `envconfig:"SERVER_COMPUTE_SYNCER_RESOURCES_TO_SYNC" yaml:"computeSyncerResourcesToSync,omitempty" default:"services,ingresses.networking.k8s.io,deployments.apps"`
 	ComputeSyncerFeatureGates    string   `envconfig:"SERVER_COMPUTE_SYNCER_FEATURE_GATES" yaml:"computeSyncerFeatureGates,omitempty" default:""`
 
 	ControllerPotatoesCount     int64  `envconfig:"SERVER_CONTROLLER_POTATOES_COUNT" yaml:"controllerPotatoesCount,omitempty" default:"100"`
